@@ -11,7 +11,10 @@
     min-width: 300px;
     max-width: 400px;
     border-radius: 20px;
-    // padding-top: 130px;
+
+    .desktop-img {
+        display: none;
+    }
     
     &__img__container {
         min-height: 130px;
@@ -20,6 +23,7 @@
     &__img__main {
         position: absolute;
         min-width: 70%;
+        max-width: 300px;
         top: 0;
         left: 50%;
         transform: translate(-50%, -60%);
@@ -98,6 +102,15 @@
         max-width: 1000px;
         padding: 0;
 
+        // Hide mobile images
+        .mobile-img {
+            display: none
+        }
+
+        .desktop-img {
+            display: block;
+        }
+
         &__img__container {
             flex: 1;
             min-width: 500px;
@@ -111,6 +124,7 @@
         }
 
         &__img__main {
+            max-width: 500px;
             top: 10%;
             left: -20%;
             z-index: 10;
