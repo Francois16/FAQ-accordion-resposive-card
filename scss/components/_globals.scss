@@ -1,0 +1,15 @@
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+
+body {
+    font-size: $body-font-size;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, $soft-violet, $soft-blue);
+    background-repeat: no-repeat;
+}

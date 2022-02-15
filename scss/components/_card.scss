@@ -1,0 +1,139 @@
+
+
+.card {
+    position: absolute;
+    background-color: $white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: calc(100% - 40px);
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 20px;
+    // padding-top: 130px;
+    
+    &__img__container {
+        min-height: 130px;
+    }
+
+    &__img__main {
+        position: absolute;
+        min-width: 70%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+
+    &__img__bg {
+        position: absolute;
+        min-width: 70%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__img__block {
+        display: none;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.875rem;
+        color: $very-dark-desaturated-blue;
+    }
+
+    &__faq__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__faq__container:hover {
+        cursor: pointer;
+    }
+
+    &__faq__container:hover h3 {
+        color: $soft-red;
+    }
+
+    &__faq__icon {
+        height: 8px;
+        width: auto;
+        transition: all 250ms ease;
+    }
+
+    &__faq {
+        font-weight: 400;
+        color: $dark-grayish-blue;
+    }
+
+
+    &__faq__active > h3 {
+        font-weight: 700;
+        color: $very-dark-desaturated-blue;
+    }
+
+    &__faq__answer {
+        margin-top: 15px;
+        color: $dark-grayish-blue;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 400ms;
+    }
+
+    &__faq__divider {
+        background-color: $light-grayish-blue;
+        width: 100%;
+        height: 1px;
+        margin: 15px auto;
+    }
+
+    @media (min-width: 1150px) {
+        display: flex;
+        flex-direction: row;
+        min-width: 600px;
+        max-width: 1000px;
+        padding: 0;
+
+        &__img__container {
+            flex: 1;
+            min-width: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &__accordion {
+            flex: 1;
+            padding: 60px 60px 60px 0;
+        }
+
+        &__img__main {
+            top: 10%;
+            left: -20%;
+            z-index: 10;
+            transform: none;
+        }
+
+        &__img__bg {
+            max-width: 150%;
+            top: -35%;
+            left: -72%;
+            z-index: -10;
+            transform: none;
+        }
+        
+        &__img__block {
+            display: block;
+            position: absolute;
+            top: 45%;
+            left: -9%;
+            z-index: 20;
+            transform: translateY(-30%);
+            overflow: overlay;
+        }
+    }
+
+}
